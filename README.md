@@ -16,7 +16,12 @@ Contact one of the contributors using their contact details above.
 
 We provide general support for this package, as well as paid coaching & development in Plasmic & Supabase.
 
-## Installation
+## Installation section 1: code components
+This section explains how to install the code components that are included in this package.
+* `PdfDocument`: a wrapper component for rendering a PDF
+* `PdfPage`: a component displaying 1 page of a PDF. Must be nested inside a `PdfDocument` component
+
+The code components provide JUST the functionality of previewing a PDF. They do not provide any user interface, for example zoom controls, rotation, pagination controls etc. If you want a pre-built user interface, complete Install section 1, then move on to Installation section 2.
 
 ### 01 - in Plasmic web interface
 1. Create a new Plasmic app
@@ -92,6 +97,21 @@ export default MyApp;
 1. Configure you Custom App host to point to http://localhost:3000/plasmic-host
 2. When the page reloads, the registered components should be available in Add component -> Custom Components
 
+## Installation section 2: pre-built Plasmic user interface component
+This section gives instructions on how to import into your project a pre-built user interface built in Plasmic that uses the Pdf Viewer code components (see Installation section 1).
+
+We're importing from [this example project](https://studio.plasmic.app/projects/fRdq7wprjh6Nr2UN9idWsy/) ([live link](https://plasmic-pdf-viewer-component-library.vercel.app/)).
+
+1. Make sure you've already completed Installation section 1
+2. Open your plasmic project in Plasmic studio
+3. In the left sidebar, go to More (circle with 3 horizontal dots) and then `Imported Projects`
+4. Click `+ Import` and copy this project ID in `fRdq7wprjh6Nr2UN9idWsy`
+5. If you get a popup about breakpoints, select `Keep using my existing breakpoints`.
+6. On any page in your project, click the `+` component button and add the `PdfViewer` component to your page (found under "Imported Packages" -> `Plasmic-pdf-viewer Plasmic component library`)
+7. Click on the new `PdfViewer` component on your page, find it's Props and copy an example PDF into it (eg https://cdn.filestackcontent.com/wcrjf9qPTCKXV3hMXDwK). Your PDF should show on the page.
+8. Now, go back to "More" -> "Imported Projects" and remove the package called `Plasmic-pdf-viewer Plasmic component library` by clicking the 3 dots to the right of that package and selecting `Remove imported project`
+9. Click "Confirm" in the popup
+10. The `PdfViewer` component has now been copied to your project. You'll find it under the "Components" section as if you'd created it directly within your project. You're free to edit the `PdfViewer` component as you see fit.
 
 ## Dev notes
 * To test locally:
