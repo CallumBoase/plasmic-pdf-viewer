@@ -1,6 +1,6 @@
 {
   "name": "plasmic-pdf-viewer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A component for viewing PDFs for use in Plasmic",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
