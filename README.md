@@ -71,7 +71,7 @@ PLASMIC.registerComponent(PdfPage, PdfPageMeta);
 PLASMIC.registerComponent(PdfDocument, PdfDocumentMeta);
 
 ```
-7. In `./pages` directory add a new file called `_app.tsx` and add the following content. Save your file
+6. In `./pages` directory add a new file called `_app.tsx` and add the following content. Save your file
 ```js
 import type { AppProps } from 'next/app';
 
@@ -85,7 +85,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 export default MyApp;
 ```
-8. In terminal: `npm run dev` to start your Dev server
+7. In terminal: `npm run dev` to start your Dev server
 
 
 ### 03 - in Plasmic web interface

@@ -7,12 +7,9 @@ import React from "react";
 import { useState } from "react";
 
 import { pdfjs, Document, Page } from "react-pdf"; // react-pdf components we'll use as a basis
-import "react-pdf/dist/Page/AnnotationLayer.css"; // the annotation layer css ensures annotations are styled correctly overlaying the document
-import "react-pdf/dist/Page/TextLayer.css"; // the text layer css ensures selectable text is styled correctly overlaying the document
 
 // configure the global worker - for now this is done from a CDN but should be replaced with a more long-term reliable method
-// pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
-pdfjs.GlobalWorkerOptions.workerSrc = `pdfjs-dist/build/pdf.worker.min.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
 import { DataProvider } from "@plasmicapp/loader-nextjs"; // allows a component to provide data back to Plasmic Studio
 import { SizeMe } from "react-sizeme"; // react-pdf document/pages aren't responsive/sizable. Use to create responsiveness
